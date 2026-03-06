@@ -160,7 +160,7 @@ export function getTwitterAuthUrl(state: string, codeChallenge: string): string 
     scope: 'tweet.read users.read offline.access',
     state,
     code_challenge: codeChallenge,
-    code_challenge_method: 'plain', // Use S256 in production with proper hashing
+    code_challenge_method: 'S256',
   });
   return `https://twitter.com/i/oauth2/authorize?${params}`;
 }
